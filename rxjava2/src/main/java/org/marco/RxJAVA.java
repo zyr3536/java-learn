@@ -11,6 +11,7 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 
+import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -34,7 +35,6 @@ public class RxJAVA {
     private void test() throws Exception {
         Observable
                 .just(1, 2, 3, 4, 5, 6)
-
                 .subscribe(integer -> log.info("\t{}", integer));
     }
 
