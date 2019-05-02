@@ -28,3 +28,6 @@ target
 
 #jacoco
 jacoco-report
+
+#hprof
+*.hprof

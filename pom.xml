@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>rxjava2</module>
+        <module>jvm</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -101,6 +102,12 @@
                 <groupId>org.immutables.vavr</groupId>
                 <artifactId>vavr-examples</artifactId>
                 <version>0.6.0</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-core</artifactId>
+                <version>7.5.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
