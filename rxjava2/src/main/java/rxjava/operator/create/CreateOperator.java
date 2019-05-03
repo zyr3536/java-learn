@@ -1,4 +1,4 @@
-package rxjava.operator;
+package rxjava.operator.create;
 
 import com.google.common.collect.Lists;
 import io.reactivex.Observable;

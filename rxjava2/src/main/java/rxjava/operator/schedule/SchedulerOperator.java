@@ -1,4 +1,4 @@
-package rxjava.operator;
+package rxjava.operator.schedule;
 
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;

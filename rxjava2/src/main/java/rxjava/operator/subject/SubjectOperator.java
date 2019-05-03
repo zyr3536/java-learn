@@ -1,17 +1,14 @@
-package rxjava.operator;
+package rxjava.operator.subject;
 
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
-import io.reactivex.observers.DisposableObserver;
 import io.reactivex.subjects.*;
-import io.reactivex.subscribers.SerializedSubscriber;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import rxjava.common.MyUtils;
 
-import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
