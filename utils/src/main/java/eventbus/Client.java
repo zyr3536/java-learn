@@ -13,6 +13,7 @@ import java.util.concurrent.Executors;
 /**
  * 东西是好东西，但是已经被guava标记成unstable了，应该就是存在一点问题的，项目里面最好不要用
  */
+@SuppressWarnings("all")
 public class Client {
     public static void main(String[] args) throws Exception {
         Client client = new Client();
@@ -24,6 +25,7 @@ public class Client {
       EventBus eventBus = new EventBus();
       EventListener listener = new EventListener();
       eventBus.register(listener);
+//      eventBus.unregister(listener);
       eventBus.post(new MessageEvent1("message 1 : 1"));
       eventBus.post(new MessageEvent2("message 2 : 1"));
       eventBus.post(new MessageEvent2("message 1 : 2"));
