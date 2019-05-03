@@ -11,6 +11,7 @@
     <modules>
         <module>rxjava2</module>
         <module>jvm</module>
+        <module>utils</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -78,7 +79,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>19.0</version>
+                <version>27.0-jre</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
             <dependency>
