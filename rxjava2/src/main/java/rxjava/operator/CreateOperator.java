@@ -10,6 +10,10 @@ import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import rxjava.common.MyUtils;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
+
 /**
  * Rxjava的一些创建observable操作
  */
@@ -21,7 +25,14 @@ public class CreateOperator {
         val ex = new CreateOperator();
 //        ex.create();
 //        ex.just();
-        ex.from();
+//        ex.from();
+//        ex.fromFuture();
+//        ex.interval();
+//        ex.range();
+//        ex.empty();
+//        ex.error();
+        ex.intervalRange();
+        MyUtils.sleep(10000);
     }
 
     /**
@@ -121,5 +132,69 @@ public class CreateOperator {
     }
 
     public void fromFuture() {
+        Callable callable = () -> {
+            log.info("休息一秒钟");
+            MyUtils.sleep(1000);
+            log.info("发射");
+            return 1;
+        };
+        FutureTask futureTask = new FutureTask(callable);
+         new Thread(futureTask).start();
+
+        Observable.fromFuture(futureTask)
+                .doOnNext(o -> log.info(o.toString()))
+                .subscribe();
     }
+
+    /**
+     * 周期性发送数据，而且发送的数据递增
+     * 注意：interval默认在computation线程
+     */
+    public void interval() {
+        Observable.interval(1, TimeUnit.SECONDS)
+                .doOnNext(aLong -> log.info(aLong.toString()))
+                .subscribe();
+    }
+
+
+    /**
+     * 发送一定范围内的数据
+     */
+    public void range() {
+        Observable.range(2, 10)
+                .doOnNext(i -> log.info(i.toString()))
+                .subscribe();
+        log.info("next!!!");
+        Observable.rangeLong(1, 10)
+                .doOnNext(i -> log.info(i.toString()))
+                .subscribe();
+    }
+
+    /**
+     * 跟interval一样，默认在computation线程执行
+     */
+    public void intervalRange() {
+        Observable.intervalRange(1, 10, 1, 1, TimeUnit.SECONDS)
+                .doOnNext(i -> log.info(i.toString()))
+                .subscribe();
+
+    }
+
+
+    public void empty() {
+        Observable.empty()
+                // 注意，empty()会使得后面数据处理失效
+                .doOnNext(o -> log.info("next"))
+                .doFinally(() -> log.info("final"))
+                .subscribe();
+    }
+
+    public void error() {
+        Observable.error(() -> new RuntimeException("exception"))
+                .subscribe(o -> log.info("next"), throwable -> log.error("error", throwable));
+    }
+
+
+
+
 }
