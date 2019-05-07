@@ -31,8 +31,10 @@ public class CreateOperator {
 //        ex.range();
 //        ex.empty();
 //        ex.error();
-        ex.intervalRange();
-        MyUtils.sleep(10000);
+//        ex.intervalRange();
+//        ex.never();
+        ex.repeat();
+//        MyUtils.sleep(1000000);
     }
 
     /**
@@ -180,6 +182,31 @@ public class CreateOperator {
 
     }
 
+    /**
+     * 它不是创建一个Observable，而是重复发射原始Observable的数据序列，这个序列或者是无限的，或者通过repeat(n)指定重复次数
+     * 只有当repeat()接收到onCompleted()事件后触发重订阅，所以注意看第二个输出
+     */
+    public void repeat() {
+        Observable.just(1,2)
+                .repeat(2)
+                .doOnNext(integer -> System.out.println(integer))
+                .subscribe();
+        System.out.println("==========");
+        Observable.create(new ObservableOnSubscribe<Object>() {
+            @Override
+            public void subscribe(ObservableEmitter<Object> emitter) throws Exception {
+                emitter.onNext(1);
+                emitter.onNext(2);
+            }
+        }).repeat(2)
+                .doOnNext(integer -> System.out.println(integer))
+                .subscribe();
+    }
+
+    public void repeatWhen() {
+
+    }
+
 
     public void empty() {
         Observable.empty()
@@ -194,6 +221,13 @@ public class CreateOperator {
                 .subscribe(o -> log.info("next"), throwable -> log.error("error", throwable));
     }
 
+    /**
+     * 创建一个不发射数据也不终止的Observable
+     */
+    public void never() {
+        Observable.never()
+                .subscribe(o -> log.info(o.toString()));
+    }
 
 
 
