@@ -1,4 +1,4 @@
-package eventbus;
+package org.util.eventbus;
 
 import com.google.common.eventbus.AsyncEventBus;
 import com.google.common.eventbus.DeadEvent;
