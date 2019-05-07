@@ -1,4 +1,4 @@
-package rxjava.operator.disposable;
+package org.rxjava.operator.disposable;
 
 
 import io.reactivex.Observable;
@@ -10,7 +10,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 import lombok.val;
-import rxjava.common.MyUtils;
+import org.rxjava.common.MyUtils;
 
 import java.util.concurrent.TimeUnit;
 

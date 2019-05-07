@@ -1,4 +1,4 @@
-package rxjava.operator.create;
+package org.rxjava.operator.create;
 
 import com.google.common.collect.Lists;
 import io.reactivex.Observable;
@@ -8,7 +8,7 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
-import rxjava.common.MyUtils;
+import org.rxjava.common.MyUtils;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;

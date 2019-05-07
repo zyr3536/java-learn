@@ -1,4 +1,4 @@
-package rxjava.operator.subject;
+package org.rxjava.operator.subject;
 
 
 import io.reactivex.Observer;
@@ -7,7 +7,7 @@ import io.reactivex.functions.Action;
 import io.reactivex.subjects.*;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
-import rxjava.common.MyUtils;
+import org.rxjava.common.MyUtils;
 
 import java.util.concurrent.TimeUnit;
 

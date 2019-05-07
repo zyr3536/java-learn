@@ -1,4 +1,4 @@
-package rxjava.common;
+package org.rxjava.common;
 
 /**
  * @author: zyr

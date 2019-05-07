@@ -1,8 +1,8 @@
-package rxjava.backpressure;
+package org.rxjava.backpressure;
 
 import io.reactivex.Observable;
 import io.reactivex.schedulers.Schedulers;
-import rxjava.common.MyUtils;
+import org.rxjava.common.MyUtils;
 
 /**
  * 没有背压，随着事件的推移，导致OOM

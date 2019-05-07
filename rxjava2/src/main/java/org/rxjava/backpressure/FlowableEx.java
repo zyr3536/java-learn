@@ -1,4 +1,4 @@
-package rxjava.backpressure;
+package org.rxjava.backpressure;
 
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
-import rxjava.common.MyUtils;
+import org.rxjava.common.MyUtils;
 
 /**
  * 背压
