@@ -21,6 +21,22 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>io.vavr</groupId>
+            <artifactId>vavr</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vavr</groupId>
+            <artifactId>vavr-match</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vavr</groupId>
+            <artifactId>vavr-match-processor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.immutables.vavr</groupId>
+            <artifactId>vavr-examples</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
