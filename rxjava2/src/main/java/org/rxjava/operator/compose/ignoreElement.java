@@ -1,4 +1,4 @@
-package rxjava.operator.compose;
+package org.rxjava.operator.compose;
 
 
 import io.reactivex.Observable;

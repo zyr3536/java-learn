@@ -24,7 +24,6 @@ public class MatchPattern {
         val client = new MatchPattern();
 //        client.simpleTest();
 //        client.sideAffectTest();
-        client.complexTest2();
     }
 
     public void simpleTest() {
@@ -65,47 +64,20 @@ public class MatchPattern {
                         () -> "not found"));
     }*/
 
-    public void complexTest2() {
-        LocalDate date = LocalDate.of(2017, 2, 13);
+//    public void complexTest2() {
+//        LocalDate date = LocalDate.of(2017, 2, 13);
+//
+//        String result = Match(date).of(
+//                Case(InnerPatterns.$LocalDate($(2016), $(3), $(13)),
+//                        () -> "2016-02-13"),
+//                Case(InnerPatterns.$LocalDate($(2016), $(), $()),
+//                        (y, m, d) -> "month " + m + " in 2016"),
+//                Case(InnerPatterns.$LocalDate($(), $(), $()),
+//                        (y, m, d) -> "month " + m + " in " + y),
+//                Case($(),
+//                        () -> "(catch all)")
+//        );
+//        System.out.println(result);
+//    }
 
-        String result = Match(date).of(
-                Case(InnerPatterns.$LocalDate($(2016), $(3), $(13)),
-                        () -> "2016-02-13"),
-                Case(InnerPatterns.$LocalDate($(2016), $(), $()),
-                        (y, m, d) -> "month " + m + " in 2016"),
-                Case(InnerPatterns.$LocalDate($(), $(), $()),
-                        (y, m, d) -> "month " + m + " in " + y),
-                Case($(),
-                        () -> "(catch all)")
-        );
-        System.out.println(result);
-    }
-
-    @AllArgsConstructor
-    @Getter
-    @Setter
-    static class Employee {
-        private String name;
-        private String id;
-    }
-
-
-}
-
-@Patterns
-class Inner {
-    @Unapply
-    static Tuple3<Integer, Integer, Integer> LocalDate(LocalDate date) {
-        return Tuple.of(
-                date.getYear(), date.getMonthValue(), date.getDayOfMonth());
-    }
-}
-
-class InnerPatterns1 {
-    private InnerPatterns1() {
-    }
-
-    public static <_1 extends Integer, _2 extends Integer, _3 extends Integer> Match.Pattern3<LocalDate, _1, _2, _3> $LocalDate(Match.Pattern<_1, ?> p1, Match.Pattern<_2, ?> p2, Match.Pattern<_3, ?> p3) {
-        return Match.Pattern3.of(LocalDate.class, p1, p2, p3, Inner::LocalDate);
-    }
 }
