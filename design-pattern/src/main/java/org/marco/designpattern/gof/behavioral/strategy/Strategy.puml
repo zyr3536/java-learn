@@ -1,0 +1,24 @@
+@startuml
+
+class Context {
+	- IStrategy strategy
+	+ void algorithm()
+}
+
+interface IStrategy {
+    + void algorithm()
+}
+
+class ConcreteStrategy1 {
+    + void algorithm()
+}
+
+class ConcreteStrategy2 {
+    + void algorithm()
+}
+
+ConcreteStrategy1 ..|> IStrategy
+ConcreteStrategy2 ..|> IStrategy
+
+Context o-- IStrategy
+@enduml
