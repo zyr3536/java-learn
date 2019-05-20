@@ -1,0 +1,25 @@
+@startuml
+
+interface Component {
+    + operate() : void
+}
+abstract class Decorator {
+    # component : Component
+}
+class ConcreteComponent {
+    + operate() : void
+}
+class ConcreteDecorator {
+    + component : Component
+    + operate() : void
+}
+
+Decorator ..|> Component
+
+ConcreteComponent ..|> Component
+
+ConcreteDecorator --|> Decorator
+
+Decorator *--> Component
+
+@enduml
