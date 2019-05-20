@@ -1,0 +1,28 @@
+@startuml
+
+' 抽象被观察者
+abstract class Subject {
++ notify()
++ attach()
++ detach()
+}
+
+' 观察者接口
+interface Observer {
+    + update()
+}
+
+' 被观察者实现类
+class ConcreteSubject extends Subject {
+    - private List<Observer> list;
+}
+
+' 观察者类
+class ConcreteObserver implements Observer {
+    + update()
+}
+
+
+
+
+@enduml
