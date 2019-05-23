@@ -3,7 +3,9 @@
 abstract class AbstractProduct
 class ProductA
 class ProductB
-class Factory
+class Factory {
+    + newInstance(): AbstractProduct
+}
 
 ProductA --|> AbstractProduct
 ProductB --|> AbstractProduct
