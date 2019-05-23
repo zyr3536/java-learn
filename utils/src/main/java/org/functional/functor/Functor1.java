@@ -8,5 +8,7 @@ import java.util.function.Function;
  */
 public interface Functor1<T> {
     <R> Functor1<R> map(Function<T, R> f);
+
+    <R> Functor1<R> of(T t);
 }
 

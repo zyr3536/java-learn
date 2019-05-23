@@ -6,6 +6,7 @@ import static io.vavr.Predicates.*;
 import io.vavr.API;
 import io.vavr.Tuple;
 import io.vavr.Tuple3;
+import io.vavr.control.Try;
 import io.vavr.match.annotation.Patterns;
 import io.vavr.match.annotation.Unapply;
 import lombok.AllArgsConstructor;
