@@ -1,0 +1,13 @@
+@startuml
+
+abstract class AbstractProduct
+class ProductA
+class ProductB
+class Factory
+
+ProductA --|> AbstractProduct
+ProductB --|> AbstractProduct
+
+Factory ..> AbstractProduct
+
+@enduml
