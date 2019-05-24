@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <resilience4jVersion>0.14.0</resilience4jVersion>
+        <resilience4jVersion>0.15.0</resilience4jVersion>
     </properties>
 
     <artifactId>utils</artifactId>
