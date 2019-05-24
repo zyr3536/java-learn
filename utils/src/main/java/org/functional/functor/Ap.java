@@ -19,9 +19,9 @@ public class Ap<T> implements Applicative<T> {
     public <R> Functor1<R> map(Function<T, R> f) {
         return null;
     }
-
+/*
     @Override
     public <R> Functor1<R> of(T t) {
         return null;
-    }
+    }*/
 }
