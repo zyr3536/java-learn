@@ -23,8 +23,8 @@ import java.time.LocalDate;
 public class MatchPattern {
     public static void main(String[] args) {
         val client = new MatchPattern();
-//        client.simpleTest();
-//        client.sideAffectTest();
+//        Client.simpleTest();
+//        Client.sideAffectTest();
     }
 
     public void simpleTest() {

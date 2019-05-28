@@ -10,7 +10,7 @@ import lombok.val;
 public class EitherTest {
     public static void main(String[] args) {
         EitherTest client = new EitherTest();
-//        client.test1();
+//        Client.test1();
         client.test2();
     }
 

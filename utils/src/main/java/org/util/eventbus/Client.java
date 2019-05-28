@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
 public class Client {
     public static void main(String[] args) throws Exception {
         Client client = new Client();
-//        client.simpleTest();
+//        Client.simpleTest();
         client.asyncTest();
     }
 

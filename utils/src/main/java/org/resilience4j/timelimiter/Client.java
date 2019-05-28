@@ -1,5 +1,6 @@
 package org.resilience4j.timelimiter;
 
+import com.google.common.util.concurrent.ListenableFuture;
 import io.github.resilience4j.timelimiter.TimeLimiter;
 import io.github.resilience4j.timelimiter.TimeLimiterConfig;
 import io.vavr.control.Try;
@@ -7,6 +8,7 @@ import io.vavr.control.Try;
 import java.time.Duration;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Supplier;
 
 /**

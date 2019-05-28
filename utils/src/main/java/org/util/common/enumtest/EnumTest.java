@@ -1,4 +1,4 @@
-package org.util.common;
+package org.util.common.enumtest;
 
 /**
  * @author: zyr
