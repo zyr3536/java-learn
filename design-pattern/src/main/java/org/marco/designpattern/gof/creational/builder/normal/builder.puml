@@ -1,0 +1,28 @@
+@startuml
+class Product {
+  - partA:String
+  - partB:String
+  - partC:String
+}
+abstract class Builder {
+    product:Product
+
+    + builderPartA():void
+    + builderPartB():void
+    + builderPartC():void
+    + getResult(): Product
+}
+
+class ConcreteBuilder {
+}
+
+class Director {
+    -  builder:Builder
+
+    + construct(): void
+}
+
+ConcreteBuilder --|> Builder
+Builder --> Product
+Director o--|> Builder
+@enduml
