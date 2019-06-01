@@ -11,8 +11,8 @@ public class Client {
     public static void main(String[] args) {
         val client = new Client();
 //        client.test1();
-//        client.test2();
-        client.test3();
+        client.test2();
+//        client.test3();
     }
 
     /**
@@ -36,7 +36,7 @@ public class Client {
      * 判断两个数是否符号相反
      */
     public void test2() {
-        int x = -1;
+        int x = 1;
         int y = 2;
 
         System.out.println((x ^ y) < 0);

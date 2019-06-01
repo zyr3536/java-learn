@@ -1,0 +1,33 @@
+@startuml
+
+abstract class ProductA {
+     + doA() : void
+ }
+
+ abstract class ProductB {
+     + doB() : void
+ }
+
+ abstract class Factory {
+    + createProductA(): ProductA
+    + createProductB(): ProductB
+ }
+
+ class ConcreteProductA {
+ }
+
+ class ConcreteProductB {
+ }
+
+ class ConcreteFactory {
+
+ }
+
+ ConcreteProductA --|> ProductA
+ ConcreteProductB --|> ProductB
+ ConcreteFactory --|> Factory
+
+ Factory --> ProductA
+ Factory --> ProductB
+
+@enduml
