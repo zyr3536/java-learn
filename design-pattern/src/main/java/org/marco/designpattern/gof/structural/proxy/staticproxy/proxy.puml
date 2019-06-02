@@ -1,0 +1,16 @@
+@startuml
+interface Subject {
+    +run():void
+}
+class RealSubject {
+     +run():void
+}
+class Proxy {
+    - subject:Subject
+
+    + run():void
+}
+
+RealSubject ..|> Subject
+Proxy ..|> Subject
+@enduml
