@@ -1,6 +1,5 @@
 package org.util.vavr;
 
-
 import io.vavr.control.Either;
 import lombok.val;
 
