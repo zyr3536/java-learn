@@ -7,7 +7,7 @@ package org.marco.designpattern.gof.behavioral.iterator;
  */
 public class Client {
     public static void main(String[] args) {
-        MyList myList = new MyList(1,2,3,4,5,6);
+        MyList myList = new MyList(1, 2, 3, 4, 5, 6);
         Iterator iterator = myList.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
