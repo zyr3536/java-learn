@@ -3,6 +3,7 @@ package org.util.vavr;
 import io.vavr.CheckedFunction0;
 import io.vavr.concurrent.Future;
 
+import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
 /**
